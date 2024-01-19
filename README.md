@@ -30,3 +30,13 @@ The template is ready to use for further coding, simply open the .sln file in Vi
 ### Have fun coding!
 
 Changes, pushes, comments are always welcome. Fork and use at your own convenience. The Singleton class is not mine, neither can I find the original author. Possibly from a stackoverflow thread I found only a few years ago, since it works with C++20 only.
+
+> How to use the Singleton class template?
+
+Simply derive your class like this
+
+`class MyClass : public Singleton<MyClass>`
+
+Above this line, you can simplify referencing the class instance in your code like so:
+
+`#define MY_CLASS MAKE_INSTANCE(MyClass)`, which will allow you to use it like `MY_CLASS.MyPublicMethod()`
